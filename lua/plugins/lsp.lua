@@ -10,7 +10,7 @@ return {
     dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls" }, -- install lua_ls automatically
+        ensure_installed = { "lua_ls", "ts_ls" }, -- install lua_ls automatically
         automatic_installation = true,
       })
     end,
@@ -19,6 +19,7 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      -- Lua Setup
       require("lspconfig").lua_ls.setup({
         capabilities = capabilities,  -- Attach nvim-cmp capabilities
         settings = {
@@ -28,6 +29,11 @@ return {
             },
           },
         },
+      })
+
+      -- TsSetup
+      require("lspconfig").ts_ls.setup({
+
       })
     end,
   },
