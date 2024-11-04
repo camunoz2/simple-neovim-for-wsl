@@ -35,3 +35,4 @@ require("lazy").setup({
 require("config.keymaps")
 require("config.options")
 require("config.terminal")
+require("config.autocmds")
