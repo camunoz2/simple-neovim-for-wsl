@@ -8,8 +8,8 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			javascript = { "prettierd" },
-			typescript = { "prettierd" }, -- For .ts files
-			tsx = { "prettierd" }, -- For .tsx files
+			typescript = { "prettierd" },
+			tsx = { "prettierd" },
 		},
 	},
 	config = function(_, opts)

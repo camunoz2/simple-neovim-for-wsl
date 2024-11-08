@@ -19,14 +19,14 @@ badd +4 lua/plugins/colorscheme.lua
 badd +3 lua/plugins/telescope.lua
 badd +11 lua/plugins/mini.lua
 badd +10 lua/plugins/formatter.lua
-badd +7 lua/config/keymaps.lua
+badd +19 lua/config/keymaps.lua
 badd +1 lua/config/autocmds.lua
 badd +33 lua/config/lazy.lua
 argglobal
 %argdel
-edit lua/plugins/formatter.lua
+edit lua/config/keymaps.lua
 argglobal
-balt lua/config/keymaps.lua
+balt lua/plugins/formatter.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -37,12 +37,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 10 - ((9 * winheight(0) + 21) / 43)
+let s:l = 19 - ((15 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10
-normal! 033|
+keepjumps 19
+normal! 0
 lcd ~/.config/nvim
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
